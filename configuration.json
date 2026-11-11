@@ -1,0 +1,93 @@
+[
+    {
+        "key": "ClientId",
+        "type": "input",
+        "defaultValue": "",
+        "templateOptions": {
+            "label": "ClientId",
+            "description": "The client ID of the machine-to-machine client in the Unit4 Identity Server",
+            "required": true
+        }
+    },
+    {
+        "key": "ClientSecret",
+        "type": "input",
+        "defaultValue": "",
+        "templateOptions": {
+            "type": "password",
+            "label": "ClientSecret",
+            "description": "The client secret of the machine-to-machine client",
+            "required": true
+        }
+    },
+    {
+        "key": "TokenUrl",
+        "type": "input",
+        "defaultValue": "",
+        "templateOptions": {
+            "label": "TokenUrl",
+            "description": "The token endpoint of the Unit4 Identity Server, for example: https://example.com/identity/connect/token",
+            "required": true
+        }
+    },
+    {
+        "key": "Scope",
+        "type": "input",
+        "defaultValue": "u4erp",
+        "templateOptions": {
+            "label": "Scope",
+            "description": "The OAuth scope for the Unit4 ERPx API",
+            "required": true
+        }
+    },
+    {
+        "key": "BaseUrl",
+        "type": "input",
+        "defaultValue": "",
+        "templateOptions": {
+            "label": "BaseUrl",
+            "description": "The URL to the Unit4 ERPx API, for example: https://example.com",
+            "required": true
+        }
+    },
+    {
+        "key": "CompanyId",
+        "type": "input",
+        "defaultValue": "",
+        "templateOptions": {
+            "label": "CompanyId",
+            "description": "The Unit4 ERPx company (administration) used for all calls, the default role and company entry and the roles",
+            "required": true
+        }
+    },
+    {
+        "key": "ContactPointType",
+        "type": "input",
+        "defaultValue": "1",
+        "templateOptions": {
+            "label": "ContactPointType",
+            "description": "The contactPointType of the user contact point that holds the e-mail address. Leave empty to create the contact point without a type",
+            "required": false
+        }
+    },
+    {
+        "key": "AddDefaultRoleAndCompanyOnCreate",
+        "type": "checkbox",
+        "defaultValue": true,
+        "templateOptions": {
+            "label": "Add default role and company on create",
+            "description": "When enabled, create sends one roleAndCompany entry for CompanyId (with personId and DefaultRoleId) and sets defaultLogonCompany to CompanyId",
+            "required": false
+        }
+    },
+    {
+        "key": "DefaultRoleId",
+        "type": "input",
+        "defaultValue": "",
+        "templateOptions": {
+            "label": "DefaultRoleId",
+            "description": "The roleId of the default role and company entry. Leave empty to send the entry without a role",
+            "required": false
+        }
+    }
+]
